@@ -1,0 +1,24 @@
+a:link {
+    color: lime;
+}
+a:visited {
+    color: green;
+}
+a:hover {
+    color: gray;
+}
+a:active {
+    color: blue;
+}
+h1  {
+    padding: 5px;
+}
+span    {
+    margin: 5px;
+}
+p {
+    margin: 5px;
+}
+input {
+    margin: 5px;
+}

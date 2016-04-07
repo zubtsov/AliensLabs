@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <h:outputStylesheet library="css" name="styles.css" />
+</h:head>
+<h:body>
+    <!--f:loadBundle basename="messages.myMessages" var="msg"/-->
+    <h:form>
+        Слово:
+        <h:inputText id="word" value="#{myTaskBean.word}" label="Слово" validatorMessage="Слово должно быть длиной не менее 1 символа">
+                <f:validateLength minimum="1"/>
+        </h:inputText>
+        <br/>
+        Количество повторений:
+        <h:inputText id="amount" value="#{myTaskBean.amount}" label="Количество" validatorMessage="Количество повторений должно быть неотрицательным числом">
+            <f:validateLongRange
+                    minimum="0"/>
+        </h:inputText>
+        <br/>
+        <h:commandButton id="submit" value="Отправить"
+                         action="result.xhtml"/>
+    </h:form>
+</h:body>
+</html>
